@@ -7,7 +7,7 @@ describe('test/ocr.test.js',function () {
   describe('scan for cdn_url  ',function () {
     it('should have result',function (done) {
       ocr.scan({
-        url:'http://7xod3k.com1.z0.glb.clouddn.com/dpsqixoxxfdcdphfhgoinffvwoxdktgi',
+        url:'https://raw.githubusercontent.com/netpi/baidu-ocr-api/master/test/test.jpg',
         type:'text',
         merge:false
       },function (err,result) {

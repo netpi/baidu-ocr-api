@@ -11,7 +11,7 @@ var sk = '64631fe987f4423bb0a117101bf90a45'
 var ocr = require('../').create(ak,sk);
 // 外部图片
 ocr.scan({
-  url:'http://7xod3k.com1.z0.glb.clouddn.com/dpsqixoxxfdcdphfhgoinffvwoxdktgi',
+  url:'https://raw.githubusercontent.com/netpi/baidu-ocr-api/master/test/test.jpg',
   type:'text',
 },function (err,result) {
   if(err){
