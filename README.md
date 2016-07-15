@@ -55,6 +55,7 @@ make cov # Coverage rate
 ```
 ### license MIT
 
+
 [downloads-image]: http://img.shields.io/npm/dm/baidu-ocr-api.svg
 
 [npm-url]: https://npmjs.org/package/baidu-ocr-api
@@ -63,5 +64,5 @@ make cov # Coverage rate
 [travis-url]: https://travis-ci.org/netpi/baidu-ocr-api
 [travis-image]: http://img.shields.io/travis/netpi/baidu-ocr-api.svg
 
-[coveralls-url]: https://coveralls.io/r/netpi/baidu-ocr-api.js
-[coveralls-image]: http://img.shields.io/coveralls/netpi/baidu-ocr-api.js/master.svg
+[coveralls-url]: https://coveralls.io/r/netpi/baidu-ocr-api
+[coveralls-image]: http://img.shields.io/coveralls/netpi/baidu-ocr-api/master.svg

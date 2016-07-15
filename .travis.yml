@@ -4,4 +4,4 @@ node_js:
   - 5.0
   - stable
 after_script:
-  - make cov
+  - make coveralls
