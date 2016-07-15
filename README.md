@@ -1,11 +1,13 @@
-## Baidu-OCR-API for nodejs
----
+## [Baidu-OCR-API](https://bce.baidu.com/doc/OCR/ProductDescription.html#.E4.BB.8B.E7.BB.8D) for nodejs
+
 ### Install
 ```
 npm install baidu-ocr-api --save
 
 ```
-### Useage
+### Usage
+
+> 登陆 [百度bcs控制台中心](https://console.bce.baidu.com/iam/#/iam/accesslist) 申请access key
 
 ```js
 var should = require('should');
@@ -14,34 +16,30 @@ var sk = 'your sk';
 var ocr = require('../').create(ak,sk);
 var opt= {
   //  url can be a cdn url, or a local url like : __dirname+'/test.jpg'  
-  url:'http://7xod3k.com1.z0.glb.clouddn.com/bdjgabbhktuzrptnxtosgxnfmlaviwat',
+  url:'http://7xod3k.com1.z0.glb.clouddn.com/fbuguhlemsgeilpkxykeluenbjkozzne',
   // type: line,text,character default:line
-  type:'line'
+  type:'line',
+  language:'CHN_ENG'
 }
-
 ocr.scan(opt,function (err,result) {
     if(err){
       return console.log(err);
     }
-    console.log(result);
-    /**
-    {
-    results: [{
-      rectangle: {
-        left: 0,
-        top: 0,
-        width: 777,
-        height: 269
-      },
-      word: '性站重的用户流失,很多时候网站性能问题是网站架构升级优化的触发器。可以说性能是网峡构设计的一个重要或面,任何软乎架构设计方案都必财滤可能会带来的性能问题。    也正是因为性能问题几乎无处不在,所以优化网站性能的手段也目瑞多,从用户浏览器到数据库,影响用户请求的所有环节嘟可以进行性能优化。'
-      }]
-    }
-    **/
+    console.log(result); // 参看 examples
 
 })
 
+
 ```
-![](http://7xod3k.com1.z0.glb.clouddn.com/bdjgabbhktuzrptnxtosgxnfmlaviwat)
+### opt
+| 字段名      | 值                                        | 选项          | 描述     |
+| -------- | ---------------------------------------- | ----------- | ------ |
+| url      | `cdn` 地址 <br/> 本地地址: __diranme+'/test.jpg' | 必选          | 目标地址   |
+| type     | `text`:识别某张图中的所有文字<br>`line`: 将结果作为单行文字去解析<br>`character`:识别某张图中的单个文字 | 可选(默认:line) | 返回结果结构 |
+| language | , <br/>可选 : `CHN_ENG`/`CHN`/`ENG`   | 可选<br/> 默认:`CHN_ENG`          | 返回语言类型 |
+
+
+
 
 ### test
 ```sh

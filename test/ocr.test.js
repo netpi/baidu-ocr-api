@@ -7,9 +7,12 @@ describe('test/ocr.test.js',function () {
   describe('scan for cdn_url  ',function () {
     it('should have result',function (done) {
       ocr.scan({
-        url:'http://7xod3k.com1.z0.glb.clouddn.com/bdjgabbhktuzrptnxtosgxnfmlaviwat',
-        type:'line'
+        url:'http://7xod3k.com1.z0.glb.clouddn.com/dpsqixoxxfdcdphfhgoinffvwoxdktgi',
+        type:'text',
+        merge:false
       },function (err,result) {
+        console.log(err,result)
+
         result.should.be.an.instanceOf(Object);
         done()
       })

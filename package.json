@@ -1,5 +1,5 @@
 {
-  "name": "ocr-baidu",
+  "name": "baidu-ocr-api",
   "version": "1.0.0",
   "description": "OCR for baidu api",
   "main": "index.js",
@@ -23,5 +23,13 @@
     "istanbul": "^0.4.4",
     "mocha": "^2.5.3",
     "should": "^9.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netpi/baidu-ocr-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/netpi/baidu-ocr-api/issues"
+  },
+  "homepage": "https://github.com/netpi/baidu-ocr-api"
 }
