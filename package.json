@@ -1,0 +1,27 @@
+{
+  "name": "ocr-baidu",
+  "version": "1.0.0",
+  "description": "OCR for baidu api",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "ocr",
+    "baidu",
+    "bos"
+  ],
+  "author": "netpi",
+  "license": "MIT",
+  "dependencies": {
+    "urllib": "^2.11.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3",
+    "should": "^9.0.2"
+  }
+}
