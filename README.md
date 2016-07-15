@@ -1,5 +1,8 @@
 ## [Baidu-OCR-API](https://bce.baidu.com/doc/OCR/ProductDescription.html#.E4.BB.8B.E7.BB.8D) for nodejs
 
+[![](https://travis-ci.org/netpi/baidu-ocr-api.svg?branch=master)](https://travis-ci.org/netpi/baidu-ocr-api)
+
+
 ### Install
 ```
 npm install baidu-ocr-api --save
@@ -8,6 +11,8 @@ npm install baidu-ocr-api --save
 ### Usage
 
 > 登陆 [百度bcs控制台中心](https://console.bce.baidu.com/iam/#/iam/accesslist) 申请access key
+>
+参看 [examples](https://github.com/netpi/baidu-ocr-api/tree/master/examples)
 
 ```js
 var should = require('should');

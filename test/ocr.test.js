@@ -11,8 +11,6 @@ describe('test/ocr.test.js',function () {
         type:'text',
         merge:false
       },function (err,result) {
-        console.log(err,result)
-
         result.should.be.an.instanceOf(Object);
         done()
       })
@@ -25,9 +23,7 @@ describe('test/ocr.test.js',function () {
         url:__dirname+'/test.jpg',
         type:'line'
       },function (err,result) {
-        console.log(result.results);
         result.should.be.an.instanceOf(Object);
-
         done()
       })
     })
