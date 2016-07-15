@@ -1,7 +1,7 @@
 ## [Baidu-OCR-API](https://bce.baidu.com/doc/OCR/ProductDescription.html#.E4.BB.8B.E7.BB.8D) for nodejs
 
-[![](https://travis-ci.org/netpi/baidu-ocr-api.svg?branch=master)](https://travis-ci.org/netpi/baidu-ocr-api)
 
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Downloads][downloads-image]][npm-url]
 
 ### Install
 ```
