@@ -17,10 +17,9 @@ npm install baidu-ocr-api --save
 参看 [examples](https://github.com/netpi/baidu-ocr-api/tree/master/examples)
 
 ```js
-var should = require('should');
 var ak = 'your ak';
 var sk = 'your sk';
-var ocr = require('../').create(ak,sk);
+var ocr = require('baidu-ocr-api').create(ak,sk);
 var opt= {
   //  url can be a cdn url, or a local url like : __dirname+'/test.jpg'  
   url:'http://7xod3k.com1.z0.glb.clouddn.com/fbuguhlemsgeilpkxykeluenbjkozzne',
