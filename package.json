@@ -1,6 +1,6 @@
 {
   "name": "baidu-ocr-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "OCR for baidu api",
   "main": "index.js",
   "directories": {
