@@ -5,7 +5,6 @@ https://console.bce.baidu.com/iam/#/iam/accesslist
 
 **/
 
-var should = require('should');
 var ak = 'b7d11214c8fc452db3de12028cf46daa';
 var sk = '64631fe987f4423bb0a117101bf90a45'
 var ocr = require('../').create(ak,sk);
