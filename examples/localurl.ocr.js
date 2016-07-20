@@ -11,7 +11,7 @@ var ocr = require('../').create(ak,sk);
 
 // 本地图片
 ocr.scan({
-  url:__dirname+'/test.jpg',
+  url:__dirname+'/test01.jpg',
   type:'text',
 },function (err,result) {
   if(err){

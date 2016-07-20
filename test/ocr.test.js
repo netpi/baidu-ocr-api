@@ -57,7 +57,7 @@ describe('test/ocr.test.js',function () {
   describe('scan for local url  ',function () {
     it('should return object',function (done) {
       ocr.scan({
-        url:__dirname+'/test.jpg',
+        url:__dirname+'/test01.jpg',
         type:'text'
       }).then(function(result) {
         result.should.be.an.instanceOf(Object);
