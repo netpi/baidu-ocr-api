@@ -4,6 +4,13 @@
 
 [![Downloads][downloads-image]][npm-url]
 
+### Advantage
+-  支持本地图片 外部图片(速度取决图片大小)
+-  识别简单的验证码
+-  平时相机拍摄书本的文字,基本能达到 95%
+-  支持 shell/nodejs 全局安装可在控制台直接运行
+-  bluebird/promise 接口操作灵活
+
 ### Install & Usage
 
 #### 1. Global
@@ -47,7 +54,7 @@ https://console.bce.baidu.com/iam/#/iam/accesslist
 **/
 var ak = 'your ak';
 var sk = 'your sk';
-var ocr = require('../').create(ak,sk);
+var ocr = require('baidu-ocr-api').create(ak,sk);
 // 外部图片
 ocr.scan({
   url:'http://7pun4e.com1.z0.glb.clouddn.com/test.jpg', // 支持本地路径
