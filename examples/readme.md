@@ -2,5 +2,5 @@
 
 
 ```js
-node orc.js
+node cdnurl.ocr.js
 ```

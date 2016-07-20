@@ -23,7 +23,7 @@ ocr ./test.jpg
 ```
 ##### 效果图
 
-![](http://7pun4e.com1.z0.glb.clouddn.com/test.jpg)
+![](https://raw.githubusercontent.com/netpi/baidu-ocr-api/master/examples/test.jpg)
 
 
 
