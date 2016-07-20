@@ -1,6 +1,6 @@
 {
   "name": "baidu-ocr-api",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "OCR for baidu api",
   "main": "index.js",
   "directories": {
@@ -23,9 +23,7 @@
     "bluebird": "^3.4.1",
     "colors": "^1.1.2",
     "minimist": "^1.2.0",
-    "request": "^2.73.0",
     "request-promise": "^4.0.2",
-    "urllib": "^2.11.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.11",
