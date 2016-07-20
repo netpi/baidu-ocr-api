@@ -1,0 +1,34 @@
+#!/usr/bin/env node
+
+var ak = process.env.BAIDU_AK||'b7d11214c8fc452db3de12028cf46daa';
+var sk = process.env.BAIDU_SK||'64631fe987f4423bb0a117101bf90a45';
+var ocr  = require('../lib/ocr').create(ak,sk);
+var argv = require("minimist")(process.argv.slice(2));
+var colors = require('colors');
+String.prototype.startWith = function(compareStr){
+  return this.indexOf(compareStr) == 0;
+}
+var opt = {};
+opt.url = argv._[0]||argv.u;
+opt.type = argv.type||argv.t||'text';
+opt.language = argv.language||'CHE_ENG';
+opt.merge = argv.m||argv.merge;
+
+if(!opt.url||argv.h||argv.help){
+  console.log('\n')
+  console.log('Example usage:\n');
+  console.log("  ocr", "[url] [options] ");
+  console.log("  ocr","http://7pun4e.com1.z0.glb.clouddn.com/test.jpg", "-m -l CHE_ENG ".yellow);
+  console.log('\n')
+  console.log("Options:\n");
+
+  console.log("    -t, --type".yellow,"        text line character ");
+  console.log("    -l, --language".yellow,"    CHE_ENG CHE ENG");
+  console.log("    -m, --marge".yellow,"       merge result");
+  process.exit(0);
+}
+ocr.scan(opt).then(function (result) {
+  console.log(result.results.words);
+}).catch(function (err) {
+  console.log('err', err);
+})

@@ -1,51 +1,63 @@
 ## [Baidu-OCR-API](https://bce.baidu.com/doc/OCR/ProductDescription.html#.E4.BB.8B.E7.BB.8D) for nodejs
 
-
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
 
 [![Downloads][downloads-image]][npm-url]
 
-### Install
+### Install & Usage
+
+#### 1. Global
+
+```sh
+npm install baidu-ocr-api -g
+
+
+ocr --help
+
+# 远程图片
+ocr http://7pun4e.com1.z0.glb.clouddn.com/test.jpg
+
+# 本地图片
+ocr ./test.jpg
+
 ```
+##### 效果图
+
+![](http://7pun4e.com1.z0.glb.clouddn.com/test.jpg)
+
+
+
+   的早期世界观是建立在《魔兽争霸3：冰封王座》的基础上的，因此与现在暴雪公司的《魔兽世界》的背景设定有一定的联系，但由于版本更迭又略有不同。整个地图中地形名费伍德森林，费伍德森林是网络游戏《魔兽世界》中的游戏地图，位于卡利姆多境内的一片森林。这片由森林和草场构成的繁荣动荡的土地曾经由卡尔多雷掌管，并曾经处于半神塞纳留斯的保护下。燃烧军团的铁蹄践踏了这片土地，没有被毁灭的树木和生物则被恶魔的暴行永远的诅咒着
+
+
+#### 2. nodejs
+```sh
 npm install baidu-ocr-api --save
 
 ```
-### Usage
-
-> 登陆 [百度bcs控制台中心](https://console.bce.baidu.com/iam/#/iam/accesslist) 申请access key
->
-参看 [examples](https://github.com/netpi/baidu-ocr-api/tree/master/examples)
+FYI [examples](https://github.com/netpi/baidu-ocr-api/tree/master/examples)
 
 ```js
+/**
+
+登陆 百度bcs控制台中心 申请access key
+https://console.bce.baidu.com/iam/#/iam/accesslist
+
+**/
 var ak = 'your ak';
 var sk = 'your sk';
-var ocr = require('baidu-ocr-api').create(ak,sk);
-var opt= {
-  //  url can be a cdn url, or a local url like : __dirname+'/test.jpg'  
-  url:'http://7xod3k.com1.z0.glb.clouddn.com/fbuguhlemsgeilpkxykeluenbjkozzne',
-  // type: line,text,character default:line
-  type:'line',
-  language:'CHN_ENG'
-}
-ocr.scan(opt,function (err,result) {
-    if(err){
-      return console.log(err);
-    }
-    console.log(result); // 参看 examples
-
+var ocr = require('../').create(ak,sk);
+// 外部图片
+ocr.scan({
+  url:'http://7pun4e.com1.z0.glb.clouddn.com/test.jpg', // 支持本地路径
+  type:'text',
+}).then(function (result) {
+  return console.log(result)
+}).catch(function (err) {
+  console.log('err', err);
 })
 
-
 ```
-### opt
-| 字段名      | 值                                        | 选项          | 描述     |
-| -------- | ---------------------------------------- | ----------- | ------ |
-| url      | `cdn` 地址 <br/> 本地地址: __diranme+'/test.jpg' | 必选          | 目标地址   |
-| type     | `text`:识别某张图中的所有文字<br>`line`: 将结果作为单行文字去解析<br>`character`:识别某张图中的单个文字 | 可选(默认:line) | 返回结果结构 |
-| language | , <br/>可选 : `CHN_ENG`/`CHN`/`ENG`   | 可选<br/> 默认:`CHN_ENG`          | 返回语言类型 |
-
-
-
 
 ### test
 ```sh
